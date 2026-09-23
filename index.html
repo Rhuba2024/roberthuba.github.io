@@ -1,151 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Robert J. Huba | Cybersecurity Analyst</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #111;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px;
-            line-height: 1.6;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #4da6ff;
-            margin-top: 40px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
-        }
-        h3 {
-            color: #ffffff;
-            margin-top: 25px;
-        }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 10px 10px 10px 0;
-            border: 1px solid #4da6ff;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #4da6ff;
-            color: #000;
-        }
-        .section {
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robert J. Huba | Cybersecurity &amp; Industrial Systems</title>
+  <meta name="description" content="Robert J. Huba: UNCW cybersecurity graduate, U.S. Army veteran, and mechatronics professional in Leland, NC. Explore security projects, technical skills, and experience.">
+  <meta name="theme-color" content="#101820">
+  <style>
+    :root { color-scheme: dark; --bg:#101820; --panel:#18242e; --text:#f2f5f7; --muted:#b7c5cf; --accent:#83dcc5; --line:#34444f; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:4px; }
+    a:hover { color:#fff; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
+    .wrap { width:min(1080px,calc(100% - 48px)); margin:auto; }
+    .skip { position:absolute; top:-80px; padding:10px; background:var(--bg); }
+    .skip:focus { top:8px; z-index:5; }
+    header { border-bottom:1px solid var(--line); }
+    nav { display:flex; justify-content:space-between; gap:20px; align-items:center; padding:22px 0; flex-wrap:wrap; }
+    .brand { color:var(--text); font-weight:750; text-decoration:none; letter-spacing:.05em; }
+    .navlinks { display:flex; gap:22px; flex-wrap:wrap; }
+    .navlinks a { color:var(--muted); text-decoration:none; font-size:.9rem; }
+    .hero { padding:72px 0 54px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.78rem; font-weight:750; }
+    h1 { font-size:clamp(2.8rem,7vw,4.6rem); line-height:1.1; margin:16px 0 20px; letter-spacing:-.045em; }
+    .subtitle { font-size:clamp(1.1rem,3vw,1.45rem); color:var(--text); font-weight:600; }
+    .intro { max-width:780px; font-size:1.1rem; color:var(--muted); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin:27px 0 18px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; padding:11px 20px; border:1px solid var(--line); border-radius:7px; text-decoration:none; font-weight:650; }
+    .primary { background:var(--accent); color:#101820; border-color:var(--accent); }
+    .primary:hover { background:#b2efdf; color:#101820; }
+    .availability { color:var(--muted); font-size:.92rem; }
+    section { padding:38px 0; border-top:1px solid var(--line); }
+    h2 { font-size:1.9rem; line-height:1.25; margin:0 0 14px; letter-spacing:-.02em; }
+    h3 { font-size:1.12rem; line-height:1.4; margin:0 0 8px; }
+    p { margin:0 0 16px; }
+    .section-note { max-width:760px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:24px; }
+    .card { padding:25px; background:var(--panel); border:1px solid var(--line); border-radius:10px; }
+    .card p:last-child { margin-bottom:0; }
+    .card p, li { color:var(--muted); }
+    .tag { display:block; color:var(--accent); font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; margin-bottom:12px; }
+    .tools { font-size:.87rem; }
+    .experience { margin-top:24px; display:grid; gap:25px; }
+    .role { border-left:2px solid var(--accent); padding-left:20px; }
+    .role p { max-width:850px; color:var(--muted); }
+    .meta { font-size:.87rem; margin:4px 0 9px; }
+    ul { padding-left:21px; margin:12px 0 0; }
+    .contact { margin-top:12px; }
+    footer { border-top:1px solid var(--line); padding:25px 0; color:var(--muted); font-size:.85rem; }
+    @media(max-width:650px) { .wrap { width:calc(100% - 36px); } .hero { padding:45px 0 32px; } .grid { grid-template-columns:1fr; } section { padding:30px 0; } .navlinks { gap:16px; } .card { padding:21px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { :root { --bg:#fff; --panel:#fff; --text:#111; --muted:#333; --accent:#174b43; --line:#aaa; } .navlinks,.skip { display:none; } .hero { padding:20px 0; } .card,.role { break-inside:avoid; } }
+  </style>
 </head>
 <body>
-
-<h1>Robert J. Huba</h1>
-
-<p><strong>Cybersecurity Analyst | Army Veteran | UNCW Cybersecurity Graduate</strong></p>
-
-<p>
-Army combat veteran and cybersecurity professional with a Bachelor of Science in Cybersecurity from the University of North Carolina Wilmington.
-My background includes security operations, vulnerability assessment, penetration testing, digital forensics, risk management, and ICS/OT security.
-</p>
-
-<a class="button" href="resume.pdf" target="_blank">Download Resume</a>
-<a class="button" href="https://www.linkedin.com/in/robert-huba-cybersecurity" target="_blank">LinkedIn</a>
-<a class="button" href="https://github.com/Rhuba2024" target="_blank">GitHub</a>
-<a class="button" href="mailto:contact@roberthuba.com">Contact Me</a>
-
-<h2>About Me</h2>
-
-<p>
-My experience spans security operations, vulnerability assessment, penetration testing, digital forensics, risk management, and ICS/OT security.
-Through academic projects, cybersecurity competitions, and professional engagements, I have developed hands-on experience with tools including
-Splunk, Nessus, Wireshark, Burp Suite, Metasploit, Nmap, Kali Linux, and Python.
-</p>
-
-<p>
-Prior to entering cybersecurity, I served over eight years on active duty in the United States Army, including two combat deployments to Iraq
-and leadership assignments responsible for the protection of personnel and critical assets. Those experiences developed the discipline,
-attention to detail, and mission-focused mindset that guide my approach to cybersecurity today.
-</p>
-
-<p>
-I am actively pursuing opportunities in Security Operations, Incident Response, Vulnerability Management, Risk Assessment, and Defensive Cyber Operations.
-</p>
-
-<h2>Technical Skills</h2>
-
-<h3>Security Tools</h3>
-<p>Splunk, Wireshark, Nessus, Metasploit, Burp Suite, Nmap, Kali Linux, John the Ripper, Hashcat</p>
-
-<h3>Operating Systems</h3>
-<p>Windows, Windows Server, Kali Linux, Ubuntu</p>
-
-<h3>Networking</h3>
-<p>TCP/IP, DNS, Routing & Switching, Network Analysis, Packet Capture & Analysis</p>
-
-<h3>Programming & Scripting</h3>
-<p>Python, Bash, PowerShell</p>
-
-<h3>Security Frameworks & Compliance</h3>
-<p>NIST Cybersecurity Framework, FTC Safeguards Rule, NYDFS 23 NYCRR 500, Risk Assessment, Vulnerability Management, WISP Development</p>
-
-<h2>Professional Development</h2>
-
-<ul>
-    <li>NSA Codebreaker Challenge Participant (2023–2025)</li>
-    <li>National Cyber League Competitor</li>
-    <li>InfoSeCon Bank Penetration Test Participant</li>
-    <li>UNCW Cybersecurity Conference Attendee</li>
-    <li>WITX Learning Exchange Participant</li>
-</ul>
-
-<h2>Featured Projects</h2>
-
-<h3>Home Cybersecurity Lab</h3>
-<p>
-Designed and maintained a virtual cybersecurity lab environment utilizing Kali Linux, Windows systems, and intentionally vulnerable targets
-to practice penetration testing, vulnerability assessment, network analysis, and incident response techniques.
-</p>
-
-<h3>National Cyber League Competitions</h3>
-<p>
-Participated in National Cyber League competitions focused on digital forensics, network traffic analysis, password cracking,
-open-source intelligence, web application security, log analysis, and incident response.
-</p>
-
-<h3>NSA Codebreaker Challenge</h3>
-<p>
-Participated in annual NSA-sponsored cybersecurity challenges involving reverse engineering, malware analysis, cryptography,
-digital forensics, and investigative problem-solving.
-</p>
-
-<h3>Data Droplets Security Compliance Project</h3>
-<p>
-Assisted with development and maintenance of Written Information Security Program documentation supporting FTC Safeguards Rule
-and NYDFS cybersecurity compliance requirements. Contributed to risk assessment activities, policy development, and security awareness initiatives.
-</p>
-
-<h3>Freedom Sailing Leadership</h3>
-<p>
-Serve as Chief Operations Officer for Freedom Sailing, a nonprofit organization providing sailing experiences and community support for military
-veterans and first responders. Lead organizational operations, strategic planning, volunteer coordination, and community outreach initiatives.
-</p>
-
-<h2>Contact</h2>
-
-<p>Email: <a href="mailto:contact@roberthuba.com">contact@roberthuba.com</a></p>
-<p>Website: <a href="https://roberthuba.com">roberthuba.com</a></p>
-<p>Location: Leland, North Carolina</p>
-
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="wrap" aria-label="Main navigation">
+  <a class="brand" href="#main">ROBERT J. HUBA</a>
+  <div class="navlinks"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main id="main" class="wrap">
+  <div class="hero">
+    <p class="eyebrow">U.S. Army Veteran · UNCW Cybersecurity Graduate</p>
+    <h1>Robert J. Huba</h1>
+    <p class="subtitle">Cybersecurity · Risk &amp; Compliance · Industrial Systems</p>
+    <p class="intro">I combine cybersecurity training, industrial troubleshooting experience, and more than eight years of Army service. My work includes security assessment documentation, network analysis, and hands-on security labs, with a particular interest in protecting the systems that keep operations running.</p>
+    <div class="actions">
+      <a class="button primary" href="resume.pdf" download>Download Resume</a>
+      <a class="button" href="#projects">Explore My Work</a>
+      <a class="button" href="mailto:contact@roberthuba.com">Contact Me</a>
+    </div>
+    <p class="availability">Based in Leland, North Carolina · Seeking remote and Wilmington-area cybersecurity opportunities</p>
+  </div>
+  <section id="projects">
+    <h2>Selected Security Work</h2>
+    <p class="section-note">Practical experience from academic projects, independent labs, competitions, and security compliance work.</p>
+    <div class="grid">
+      <article class="card"><span class="tag">Independent lab</span><h3>Virtual Security Lab</h3><p>Built a virtual environment with Kali Linux, Windows systems, and intentionally vulnerable targets to practice vulnerability assessment, network traffic analysis, and authorized security testing.</p><p class="tools"><strong>Tools:</strong> Kali Linux, Wireshark, Nmap, Nessus, Metasploit</p></article>
+      <article class="card"><span class="tag">Academic project</span><h3>Windows Server Hardening</h3><p>Practiced reducing exposed services and controlling access in a Windows Server lab, including service configuration, firewall rules, Remote Desktop protections, and application control.</p><p class="tools"><strong>Focus:</strong> Windows Server, access controls, system hardening</p></article>
+      <article class="card"><span class="tag">Academic research</span><h3>Steganography &amp; Digital Forensics</h3><p>Researched how data can be concealed in digital images and examined tools and methods for identifying and extracting hidden content.</p><p class="tools"><strong>Tools:</strong> Steghide, Binwalk, Python</p></article>
+      <article class="card"><span class="tag">Assessment &amp; compliance experience</span><h3>Security Policy &amp; Risk Documentation</h3><p>Supported written information security program documentation, risk assessment activities, and security awareness work related to the FTC Safeguards Rule and New York DFS cybersecurity requirements.</p><p class="tools"><strong>Focus:</strong> WISP documentation, risk assessment, policy review</p></article>
+    </div>
+  </section>
+  <section id="experience">
+    <h2>Operations &amp; Leadership</h2>
+    <div class="experience">
+      <article class="role"><h3>Chief Operations Officer · Freedom Sailing</h3><p class="meta">June 2021 - Present</p><p>Coordinate operations, scheduling, logistics, volunteer activities, and community relationships for a nonprofit providing free sailing experiences to veterans and first responders.</p></article>
+      <article class="role"><h3>Industrial Operations · IVP Forest Products</h3><p class="meta">2017 - 2020</p><p>Worked with production machinery, motors, sensors, hydraulics, and pneumatic systems. Contributed operator knowledge to industrial controls and HMI improvements during modernization of a 225-foot log line.</p></article>
+      <article class="role"><h3>Infantry Team Leader &amp; Battle NCO · U.S. Army</h3><p class="meta">May 2004 - November 2012</p><p>Served on two combat deployments to Baghdad and in a 24/7 Base Defense Operations Center in Kuwait supporting protection of more than 9,000 personnel. Built a foundation in risk assessment, incident coordination, and accountable leadership under pressure.</p></article>
+    </div>
+  </section>
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <p class="section-note">Developed through coursework, lab practice, security assessment work, and industrial operations.</p>
+    <div class="grid">
+      <article class="card"><h3>Security Analysis &amp; Testing</h3><p>Wireshark, Splunk, Nessus, Nmap, Burp Suite, Metasploit, John the Ripper, Hashcat</p></article>
+      <article class="card"><h3>Systems &amp; Scripting</h3><p>Windows, Windows Server, Linux, Active Directory, virtualization, Python, Bash, PowerShell</p></article>
+      <article class="card"><h3>Risk &amp; Compliance</h3><p>NIST Cybersecurity Framework, FTC Safeguards Rule, NYDFS 23 NYCRR 500, risk assessment, WISP documentation</p></article>
+      <article class="card"><h3>Industrial Systems</h3><p>Mechatronics, PLC fundamentals, sensors, motors, hydraulics, pneumatics, industrial troubleshooting, ICS/OT security fundamentals</p></article>
+    </div>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="section-note">My path to cybersecurity runs through military service, manufacturing, and nonprofit leadership. I bring a practical troubleshooting mindset: understand how a system works, identify what puts it at risk, and communicate the next steps clearly.</p>
+    <div class="grid">
+      <article class="card"><h3>Education</h3><p><strong>B.S. in Cybersecurity</strong><br>University of North Carolina Wilmington<br>Graduated May 2026</p><p><strong>A.A.S. in Mechatronics Engineering Technology</strong><br>Cape Fear Community College</p></article>
+      <article class="card"><h3>Competitions &amp; Professional Development</h3><ul><li>NSA Codebreaker Challenge participant, 2023-2025</li><li>National Cyber League competitor</li><li>InfoSeCon simulated bank penetration test participant</li><li>UNCW Cybersecurity Conference and WITX attendee</li></ul></article>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p class="section-note">I'm seeking opportunities in security operations, vulnerability assessment, and cyber risk, including roles where my industrial background can contribute to ICS/OT security.</p>
+    <p class="contact"><a href="mailto:contact@roberthuba.com">contact@roberthuba.com</a><br>Leland, North Carolina</p>
+    <div class="actions"><a class="button" href="https://www.linkedin.com/in/robert-huba-cybersecurity">LinkedIn</a><a class="button" href="https://github.com/Rhuba2024">GitHub</a><a class="button" href="resume.pdf">View Resume</a></div>
+  </section>
+</main>
+<footer><div class="wrap">Robert J. Huba · Cybersecurity &amp; Industrial Systems</div></footer>
 </body>
 </html>
